@@ -41,6 +41,7 @@ export async function initServer() {
             ...User.resolvers.extraresolver,
             ...Tweet.resolvers.extraresolver
         },
+      introspection: true  
       });
 
     await graphqlServer.start()
